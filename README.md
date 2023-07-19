@@ -1,24 +1,11 @@
 <div align="center">
 
-[![Version][pypi-version]][pypi-url]
-[![Language][language-dom]][github-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![GPL License][license-shield]][license-url]
 
+  <h2>PreviewDiscordChatExporterPy</h2>
 
-  <h2>DiscordChatExporterPy</h2>
-
-  <p>
-    Export Discord chats with your discord.py (or fork) bots!
-    <br />
-    <a href="https://discord.gg/2uhHBQDwcc">Join Discord</a>
-    ·
-    <a href="https://github.com/mahtoid/DiscordChatExporterPy/issues/new?assignees=&labels=bug&template=bug-report.yml">Report Bug</a>
-    ·
-    <a href="https://github.com/mahtoid/DiscordChatExporterPy/issues/new?assignees=&labels=enhancement&template=feature-request.yml">Request Feature</a>
-  </p>
+  <h4>
+    Check out the original repository: https://github.com/mahtoid/DiscordChatExporterPy
+  </h4>
 </div>
 
 ---
@@ -26,15 +13,17 @@
 
 To install the library to your virtual environment, for bot usage, run the command:
 ```sh 
-pip install chat-exporter
-```
-
-To clone the repository locally, run the command:
-```sh
-git clone https://github.com/mahtoid/DiscordChatExporterPy
+pip install git+https://github.com/BabyEntchen/PreviewDiscordChatExporterPy
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+---
+## New Feature
+
+Get a Transcript in the HTML file, so you can see a preview of the chat in the discord file preview.
+
+Now you won't be forced to download the file to see the transcript
 
 ---
 ## Usage
