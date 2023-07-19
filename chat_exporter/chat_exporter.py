@@ -8,6 +8,7 @@ from chat_exporter.ext.discord_import import discord
 
 async def quick_export(
     channel: discord.TextChannel,
+    send_channel: discord.TextChannel = None,
     guild: Optional[discord.Guild] = None,
     bot: Optional[discord.Client] = None,
     preview: Optional[bool] = False,
@@ -16,6 +17,7 @@ async def quick_export(
     Create a quick export of your Discord channel.
     This function will produce the transcript and post it back in to your channel.
     :param channel: discord.TextChannel
+    :param send_channel: (optional) discord.TextChannel - channel to send transcript to
     :param guild: (optional) discord.Guild
     :param bot: (optional) discord.Client
     :param preview: (optional) boolean - generate text transcript in html as preview
@@ -49,6 +51,7 @@ async def quick_export(
     )
 
     transcript_file = discord.File(io.BytesIO(transcript.encode()), filename=f"transcript-{channel.name}.html")
+    channel = send_channel or channel
     return await channel.send(embed=transcript_embed, file=transcript_file)
 
 
