@@ -24,6 +24,8 @@ async def quick_export(
     :return: discord.Message (posted transcript)
     """
 
+    channel = send_channel or channel
+
     if guild:
         channel.guild = guild
 
@@ -51,7 +53,6 @@ async def quick_export(
     )
 
     transcript_file = discord.File(io.BytesIO(transcript.encode()), filename=f"transcript-{channel.name}.html")
-    channel = send_channel or channel
     return await channel.send(embed=transcript_embed, file=transcript_file)
 
 
